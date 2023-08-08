@@ -45,7 +45,7 @@
     justify-content: center;
     align-items: center;
     font-family: 'Poppins', sans-serif;
-    height: 8vh;
+    height: 10vh;
   }
   
   main {
@@ -134,20 +134,19 @@
     transform: rotate(45deg) translate(-5px, -7px);
   }
 
-  .text-inicio {
+  .container{
+    margin-left: 120px;
+    margin-top: 200px;
     font-family: 'Poppins', sans-serif;
-  }
-
-  .list {
-    margin: 200px;
   }
 
   .titulo-inicio {
     color: #1B2533;
-    font-size: 70px;
+    font-size: 60px;
     font-style: normal;
     font-weight: 600;
     line-height: 95.5%; /* 66.85px */
+    width: 800px;
   }
 
   .exp {
@@ -172,14 +171,19 @@
     line-height: 95.5%;
   }
 
+  .list {
+    top: -300px;
+    width: 700px;
+  }
+
   .paragrafo-inicio {
     margin-top: 10px;
     color: #1B2533;
-    font-size: 30px;
+    font-size: 25px;
     font-style: normal;
     font-weight: 400;
-    line-height: 95.5%; /* 28.65px */
-    width: 25px;
+    line-height: 25px;
+    width: 50%;
   }
 
   button {
@@ -187,18 +191,58 @@
     margin-top: 20px;
     margin-right: 20px;
     color: #FFF;
-    font-size: 20px;
+    font-size: 17px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
     appearance: none;
     border: 0;
-    width: 286px;
-    height: 64px;
+    width: 284px;
+    height: 60px;
     flex-shrink: 0;
     border-radius: 14px;
     background: #8247FF;
   }
+
+  button {
+    --color: #8247FF;
+    font-family: inherit;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    transition: color .5s;
+    font-size: 17px;
+    color: white;
+   }
+   
+   button:before {
+    content: "";
+    position: absolute;
+    background: #FFF;
+    height: 150px;
+    width: 270px;
+    border-radius: 50%;
+   }
+   
+   button:hover {
+    color: #8247FF;
+   }
+   
+   button:before {
+    top: 100%;
+    left: 100%;
+    transition: all .7s;
+   }
+   
+   button:hover:before {
+    top: -30px;
+    left: -30px;
+   }
+   
+   button:active:before {
+    background: #3a0ca3;
+    transition: background 0s;
+   }
 
   .btn-inicio img{
     margin-left: -90px;
@@ -207,29 +251,30 @@
   .linkedin-txt  {
     position: absolute;
     margin-left: 10px;
-    margin-top: 2px;
+    margin-top: 4px;
   }
 
-  .bloco {
+  .grid-1 {
+    margin-top: 250px;
+    position: absolute;
+    z-index: 1;
     top: -100px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    transition: all .1s ease;
+    right: 0;
+  }
+  
+  .grid-2 {
+    position: absolute;
+    right: 350px;
+    bottom: -100px;
+    z-index: 2;
   }
 
-  .img-inicio {
-    top: -100px;
-    height: 100vh;
+  .grid {
   }
-
-  .bloco-content img{
-    top: -100px;
-    top: 50px;
-    width: 100%;
+  
+  /* Caso você queira aplicar as mesmas regras a ambas as imagens */
+  .image {
+    z-index: 1; /* Pode ser ajustado conforme necessário */
+    top: -100px; /* Ajuste a posição conforme necessário */
   }
-
-  .bola {
-    top: -100px;
-
-  }
+  
